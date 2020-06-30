@@ -6,7 +6,7 @@ const MONGO_CONFIG: mongoose.ConnectionOptions = {
   useUnifiedTopology: true,
 };
 
-Logger.info(`> Database Target: ${process.env.MONGODB_URI}`);
+Logger.debug(`> Database Target: ${process.env.MONGODB_URI}`);
 
 mongoose.connect(
   process.env.MONGODB_URI ?? "No MongoDB",

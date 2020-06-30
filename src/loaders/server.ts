@@ -37,7 +37,7 @@ class Server {
     // After all, we start the server
     this.app.listen(this.port, () => {
       Logger.info(`> Express App Listening At: ${process.env.PORT}`);
-      Logger.info(
+      Logger.debug(
         `> PORT: ${process.env.PORT} - STAGE: ${process.env.NODE_ENV} - MONGO: ${process.env.MONGODB_URI}`
       );
     });

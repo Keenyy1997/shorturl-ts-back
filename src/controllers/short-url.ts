@@ -16,7 +16,7 @@ import ErrorHandler from "../helpers/error-handler";
 export async function GenerateNewShortUrl(
   req: Request,
   res: Response
-): Promise<Response> {
+): Promise<Response | void> {
   try {
     let Body: ShortUrl = req.body;
 
@@ -40,7 +40,7 @@ export async function GenerateNewShortUrl(
       err.message = "Identifier Already Exists";
     }
 
-    return ErrorHandler(err, res, statusCode);
+    ErrorHandler(err, res, statusCode);
   }
 }
 
