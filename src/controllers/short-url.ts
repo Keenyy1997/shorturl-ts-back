@@ -58,7 +58,7 @@ export async function RedirectToURL(
     const ShortUrlRecord = await getShortUrlByIdentifier(Identifier);
 
     if (ShortUrlRecord) res.redirect(ShortUrlRecord.url);
-    else res.redirect("https://google.com/");
+    else res.redirect("https://festive-nobel-d59e77.netlify.app/404");
   } catch (err) {
     let statusCode: number = 500;
     ErrorHandler(err, res, statusCode);
